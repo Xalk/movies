@@ -1,0 +1,110 @@
+.movieElement {
+    width: 25%;
+    padding: 0 12.5px;
+    margin-bottom: 25px;
+}
+
+.movieBlock {
+    position: relative;
+    border: 5px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+.movieInfo {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    transition: .4s ease;
+}
+
+.movieBlock:hover .movieInfo {
+    opacity: 1;
+    background: rgba(48, 53, 57, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.movieBlock:hover {
+    border: 5px solid #2E95DC;
+
+}
+
+.movieBlock:hover .buttonMore {
+    bottom: 35px;
+}
+
+.buttonMore {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background: #299ded;
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: #303539;
+    transition: .8s ease;
+    font-size: 25px;
+}
+
+.moviePhoto {
+    max-width: 100%;
+}
+
+.rating {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 25px;
+
+}
+
+.genres {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.subtitle {
+    padding-top: 10px;
+    font-weight: 300;
+}
+
+.title {
+    color: white;
+    font-size: 18px;
+}
+
+
+.year {
+    padding-top: 3px;
+    color: #9CA1A4;
+    font-size: 12px;
+}
+
+@media (max-width: 1025px) {
+    .movieElement {
+        width: 33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .movieElement {
+        width: 50%;
+    }
+}
+
+@media (max-width: 520px) {
+    .movieElement {
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+.loaderImage {
+    width: 200px;
+}
+
+.loaderBody {
+    position: fixed;
+    top: 40%;
+    left: 42%;
+}

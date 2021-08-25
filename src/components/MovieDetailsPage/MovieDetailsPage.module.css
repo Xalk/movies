@@ -1,0 +1,214 @@
+.detailsContainer {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    position: relative;
+}
+
+.image .coverImage {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.ratingBlock {
+    background: rgba(48, 53, 57, 0.85);
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+.ratingBlock img {
+    width: 20px;
+}
+
+.ratingNum {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.right {
+    width: 60%;
+    padding: 0 15px;
+}
+
+.shortInfoMovie {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titleMovie {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.yearMovie {
+    font-size: 35px;
+    font-weight: 200;
+}
+
+.genreItem {
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.genreItem:before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #606365;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.synopsis {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.movieAbout {
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.commentsBody {
+    border-radius: 5px;
+}
+
+.commentsTitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: white;
+    margin-top: 22px;
+    margin-bottom: 5px;
+}
+
+.outputComments {
+    max-height: 200px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 2px;
+}
+
+.comment {
+    overflow-wrap: break-word;
+    position: relative;
+    background: #606365;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.author, .time {
+    display: inline-block;
+}
+
+.time {
+    margin-left: 20px;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.author {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.text {
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: white;
+}
+
+.delButton {
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 19px;
+    height: 19px;
+    background: #C4C4C4;
+    border-radius: 5px;
+}
+
+.inputArea {
+    display: flex;
+    gap: 5px;
+    background: rgba(163, 163, 164, 0.1);
+    border-radius: 5px;
+    padding: 12px;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.inputArea textarea {
+    height: 70px;
+    width: 100%;
+    resize: none;
+    background: #606365;
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.inputArea textarea::placeholder {
+    color: white;
+}
+
+.buttonComm {
+    padding: 12px 20px;
+    background: #303539;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    display: flex;
+    align-items: center;
+
+}
+
+@media (max-width: 882px) {
+    .detailsContainer {
+        padding-top: 15px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .titleMovie {
+        font-size: 35px;
+    }
+
+}
+

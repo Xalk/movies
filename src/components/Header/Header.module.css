@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 6px 15px;
+    background-color: #1B1E21;
+}
+
+.headerBody {
+    max-width: 1230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.backButton {
+    padding: 7px 20px;
+    background: #303539;
+    border-radius: 5px;
+    cursor: pointer;
+}
