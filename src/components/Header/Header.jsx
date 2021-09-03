@@ -10,6 +10,8 @@ function Header() {
     let dispatch = useDispatch();
     const {currentMovie} = useSelector(state => ({currentMovie: state.movies.currentMovie}));
 
+
+
     const setCurrentMovieNull = () => {
         dispatch(setCurrentMovie(null));
     }

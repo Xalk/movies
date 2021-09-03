@@ -29,7 +29,8 @@ function Movies() {
             {
                 moviesState.isFetching ? <Loader/> : <div className={s.moviesContainer}>
                     {
-                        moviesState.moviesList.map(m => <Movie
+                        moviesState.moviesList.map((m,i) => <Movie
+                            key={i}
                             id={m.id}
                             movieImage={m.large_cover_image}
                             title={m.title}

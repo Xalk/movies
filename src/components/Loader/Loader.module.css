@@ -3,7 +3,9 @@
 }
 
 .loaderBody {
-    position: fixed;
-    top: 40%;
-    left: 42%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+

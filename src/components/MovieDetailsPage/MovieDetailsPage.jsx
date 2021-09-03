@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {getCurrentMovieThunk} from "../../redux/reducers/moviesReducer";
+import {getCurrentMovieThunk, setCurrentMovie} from "../../redux/reducers/moviesReducer";
 import rate from "../../assets/images/Vector.png";
 import send from "../../assets/images/send.svg";
 import s from "./MovieDetailsPage.module.css"
@@ -20,7 +20,13 @@ function MovieDetailsPage({match}) {
     useEffect(() => {
         initCurrentMovie();
         initCommentsDB();
-    }, [initCurrentMovie])
+    }, [initCurrentMovie]);
+
+
+
+    useEffect(() => {
+        return () =>  dispatch(setCurrentMovie(null));;
+    }, [dispatch]);
 
 
     let movieState = useSelector(state => ({

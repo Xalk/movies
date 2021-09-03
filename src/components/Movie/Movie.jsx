@@ -23,7 +23,7 @@ function Movie({id, movieImage, title, year, genres, rating}) {
 
                         <div className={s.genres}>
                             {
-                                genres && genres.map(g => <div>{g}</div>)
+                                genres && genres.map((g,i) => <div key={i}>{g}</div>)
                             }
                         </div>
                         <button className={s.buttonMore}>More</button>
