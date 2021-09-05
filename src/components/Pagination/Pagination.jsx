@@ -6,8 +6,10 @@ import s from "./Pagination.module.css"
 function Pagination() {
 
     const dispatch = useDispatch();
-    const {currentPage} = useSelector(state => ({
-        currentPage: state.movies.page_number
+    const {currentPage, isFetching} = useSelector(state => ({
+        currentPage: state.movies.page_number,
+        isFetching: state.movies.isFetching
+
     }));
 
     const getCurrentPage = (page) => {
@@ -18,10 +20,12 @@ function Pagination() {
         <div className={s.pagination}>
             {
                 currentPage - 1 > 0 &&
-                <div className={s.button} onClick={() => getCurrentPage(currentPage - 1)}>{currentPage - 1}</div>
+                <div className={isFetching ? s.button + " " + s.disable : s.button}
+                     onClick={() => getCurrentPage(currentPage - 1)}>{currentPage - 1}</div>
             }
             <div className={s.button + " " + s.currentPage}>{currentPage}</div>
-            <div className={s.button} onClick={() => getCurrentPage(currentPage + 1)}>{currentPage + 1}</div>
+            <div className={isFetching ? s.button + " " + s.disable : s.button}
+                 onClick={() => getCurrentPage(currentPage + 1)}>{currentPage + 1}</div>
         </div>
     );
 }
