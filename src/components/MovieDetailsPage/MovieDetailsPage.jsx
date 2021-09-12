@@ -23,9 +23,8 @@ function MovieDetailsPage({match}) {
     }, [initCurrentMovie]);
 
 
-
     useEffect(() => {
-        return () =>  dispatch(setCurrentMovie(null));;
+        return () => dispatch(setCurrentMovie(null));
     }, [dispatch]);
 
 
@@ -95,10 +94,23 @@ function MovieDetailsPage({match}) {
                                         className={s.ratingNum}>{movieState.currentMovie.rating}</div>
                                 </div>
                             </div>
+
                         </div>
                         <div className={s.right}>
                             <div className={s.shortInfoMovie}>
                                 <div className={s.titleMovie}>{movieState.currentMovie.title}</div>
+                                <div className={s.trailer}>
+                                    {
+                                        movieState.currentMovie.yt_trailer_code ?
+                                            <a href={`https://www.youtube.com/watch?v=${movieState.currentMovie.yt_trailer_code}`}>
+                                                <button>TRAILER</button>
+                                            </a> :
+                                            <a href={`https://www.youtube.com/results?search_query=${movieState.currentMovie.title} trailer`}>
+                                                <button>TRAILER</button>
+                                            </a>
+                                    }
+
+                                </div>
                                 <div className={s.yearMovie}>{movieState.currentMovie.year}</div>
                                 <div>{movieState.currentMovie.genres.map((g, i) => <div
                                     className={s.genreItem} key={`${g}_${i}`}>{g}</div>)}</div>

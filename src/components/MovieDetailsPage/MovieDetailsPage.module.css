@@ -5,6 +5,7 @@
 .left {
     display: flex;
     justify-content: center;
+
 }
 
 .image {
@@ -41,6 +42,15 @@
 .right {
     width: 60%;
     padding: 0 15px;
+}
+
+.trailer button{
+    color: white;
+    padding: 12px 20px;
+    background: #303539;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 50%);
+    height: 40px;
 }
 
 .shortInfoMovie {
