@@ -1,1 +1,1 @@
-# Contact me artem.khalturin@gmail.com
+# Contact me artem.khalturin@nure.ua
