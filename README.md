@@ -1,5 +1,1 @@
-# Contact information
-Artem Khalturin
-Ukraine
-
-artem.khalturin@nure.ua
+# Contact me artem.khalturin@nure.ua
