@@ -3,6 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {getCurrentMovieThunk, setCurrentMovie} from "../../redux/reducers/moviesReducer";
 import rate from "../../assets/images/Vector.png";
 import send from "../../assets/images/send.svg";
+import delImg from "../../assets/images/garbage.png";
+
 import s from "./MovieDetailsPage.module.css"
 
 import Loader from "../Loader/Loader";
@@ -136,6 +138,7 @@ function MovieDetailsPage({match}) {
                                                     <div className={s.text}>{c.commentText}</div>
                                                     <div className={s.delButton}
                                                          onClick={() => deleteComment(c.commentId)}>
+                                                        <img className={s.delImg} src={delImg} alt=""/>
                                                     </div>
                                                 </div>)
                                         }
