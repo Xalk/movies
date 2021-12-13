@@ -1,1 +1,5 @@
-# Contact me artem.khalturin@nure.ua
+# Contact information
+Artem Khalturin
+Ukraine
+
+artem.khalturin@nure.ua
